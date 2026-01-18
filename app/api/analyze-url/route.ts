@@ -61,7 +61,7 @@ export async function POST(req: Request) {
             host: targetHost,
             ssl: {
                 status: sslStatus,
-                issuer: sslData?.issuer?.O || 'N/A',
+                issuer: (sslData as any)?.issuer?.O || 'N/A',
                 daysRemaining: sslData?.daysRemaining || 0
             },
             heuristics,
