@@ -23,7 +23,7 @@ export async function POST(req: Request) {
             { port: 8080, service: 'HTTP-Alt' },
         ];
 
-        const results = [];
+        const results: any[] = [];
 
         // Helper to check a single port
         const checkPort = (port: number, service: string) => {
